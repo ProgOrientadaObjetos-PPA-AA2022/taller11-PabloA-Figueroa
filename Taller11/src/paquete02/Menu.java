@@ -39,9 +39,9 @@ public abstract class Menu {
 
     @Override
     public String toString() {
-        String cadena = String.format("Menu\n"
+        String cadena = String.format(""
                 + "Nombre del Plato: %s\n"
-                + "Valor Inicial del Menu: %.2f\n",
+                + "Valor Inicial del Menu: %.2f",
                 nombreP,
                 valorIni);
 

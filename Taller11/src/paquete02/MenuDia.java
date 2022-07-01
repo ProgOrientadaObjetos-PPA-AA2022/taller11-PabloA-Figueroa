@@ -17,6 +17,7 @@ public class MenuDia extends Menu {
         super(n, vaI);
         valorPostre = vaP;
         valorBebida = vB;
+        establecerValorMenu();
     }
 
     @Override
@@ -44,7 +45,7 @@ public class MenuDia extends Menu {
     @Override
     public String toString() {
         String cadena = String.format("%s\n ", super.toString());
-        cadena = String.format("%s\nMenu a la Carta\n"
+        cadena = String.format("%s"
                 + "Valor del Postre: %.2f\n"
                 + "Valor Bebida: %.2f\n"
                 + "Valor Del Menu: %.2f\n",

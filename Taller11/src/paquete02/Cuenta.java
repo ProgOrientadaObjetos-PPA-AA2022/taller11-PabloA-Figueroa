@@ -21,6 +21,8 @@ public class Cuenta {
         nombreCl = n;
         lista = listita;
         Iva = iva; 
+        establecerSubTotal();
+        establecerValoraCancelar();
     }
 
     public void establecerNombre(String n) {
@@ -59,9 +61,8 @@ public class Cuenta {
 
     @Override
     public String toString() {
-        String cadena = String.format("Datos de la Cuenta\n"
-                + "Nombre: %s\n"
-                + "Menu\n\n", obtenerNombre());
+        String cadena = String.format("Factura\n"
+                + "Cliente: %s\n", obtenerNombre());
 
         for (int i = 0; i < obtenerArriendos().size(); i++) {
             cadena = String.format("%s"

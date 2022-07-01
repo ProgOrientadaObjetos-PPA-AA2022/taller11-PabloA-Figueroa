@@ -5,6 +5,8 @@
  */
 package paquete01;
 
+import java.util.ArrayList;
+import paquete02.Cuenta;
 import paquete02.Menu;
 import paquete02.MenuAlaCarta;
 import paquete02.MenuDia;
@@ -21,16 +23,27 @@ public class Ejecutor01 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+
         // TODO code application logic here
+        ArrayList<Menu> listaMenus = new ArrayList<>();
+
+        MenuNinios me1 = new MenuNinios("Niños 01", 2.00, 1, 5);
+        MenuNinios me2 = new MenuNinios("Niños 02", 3.00, 1, 5);
+        MenuEconomico mE1 = new MenuEconomico("Econo 001", 4, 25);
+        MenuDia mD1 = new MenuDia("Dia 001", 5, 1, 1);
+        MenuAlaCarta maC1 = new MenuAlaCarta("Carta 001", 6, 1.5, 2, 10);
+
+        listaMenus.add(me1);
+        listaMenus.add(me2);
+        listaMenus.add(mE1);
+        listaMenus.add(mD1);
+        listaMenus.add(maC1);
+
+        Cuenta cue1 = new Cuenta("Rene Elizalde", 10, listaMenus);
+        System.out.println(cue1);
+
     }
-    MenuNinios me1 = new MenuNinios("Niños 01",2.00,1,5); 
-    MenuNinios me2 = new MenuNinios("Niños 02",3.00,1,5); 
-    MenuEconomico mE1 = new MenuEconomico("Econo 001",4,25);
-    MenuDia mD1 = new MenuDia("Dia 001",5,1,1);
-    MenuAlaCarta maC1 = new MenuAlaCarta("Carta 001", 6, 1.5, 2, 10);
-    
-    
-    
+
 }
 // lo que debe presentar
 /*
@@ -75,5 +88,4 @@ Subtotal: 30,1
 IVA: 10,0%
 Total a pagar: 33,110
 
-*/
-
+ */

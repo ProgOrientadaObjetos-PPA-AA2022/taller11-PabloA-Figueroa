@@ -10,19 +10,24 @@ package paquete02;
  */
 public class MenuEconomico extends Menu{
     private double valorDescuento;
+    private double porcentaje;
 
     public MenuEconomico(String n, double vaI, double vDes) {
         super(n, vaI);
-        valorDescuento = vDes;
+        porcentaje = vDes;
+        establecerValorDescuento();
+        establecerValorMenu();
+       
     }
 
     @Override
     public void establecerValorMenu() {
-        valorMenu = valorIni - ((valorIni * valorDescuento)/100);
+        valorMenu = valorIni - valorDescuento;
     }
 
-    public void establecerValorDescuento(double x) {
-        valorDescuento = x;
+    public void establecerValorDescuento() {
+        valorDescuento = (valorIni * porcentaje)/100 ;
+        //valorDescuento = valorDescuento / 100;
     }
 
     public double obtenerValorDescuento() {
@@ -31,10 +36,11 @@ public class MenuEconomico extends Menu{
     @Override
     public String toString() {
         String cadena = String.format("%s\n ", super.toString());
-        cadena = String.format("%s\nMenu Economico\n"
-                + "Valor del Menu: %.2f\n"
+        cadena = String.format("%s"
+                + "Valor del Descuento: %.2f\n"
                 + "Valor Final Del Menu: %.2f\n",
                 cadena,
+                porcentaje,
                 valorMenu);
 
         return cadena;
