@@ -9,6 +9,7 @@ package paquete02;
  * @author SALA I
  */
 public class MenuDia extends Menu {
+
     private double valorPostre;
     private double valorBebida;
 
@@ -20,33 +21,39 @@ public class MenuDia extends Menu {
 
     @Override
     public void establecerValorMenu() {
-        valorMenu = valorIni + valorPostre + valorBebida  ;
+        valorMenu = valorIni + valorPostre + valorBebida;
 
     }
 
-    public void establecerValorPorcionGuarnicion(double x) {
-        valorPorcionGuarnicion = x;
+    public void establecerValorPostre(double x) {
+        valorPostre = x;
     }
 
     public void establecerValorBebida(double x) {
         valorBebida = x;
     }
 
-    public void establecerValorPorcentajeAdicionalServicio(double x) {
-        valorPorcentajeAdicionalServicio = x;
-    }
-
-    public double obtenerValorPorcionGuarnicion() {
-        return valorPorcionGuarnicion;
+    public double obtenerValorPostre() {
+        return valorPostre;
     }
 
     public double obtenerValorBebida() {
         return valorBebida;
     }
 
-    public double obtenerValorPorcentajeAdicionalServicio() {
-        return valorPorcentajeAdicionalServicio;
-    }
+    @Override
+    public String toString() {
+        String cadena = String.format("%s\n ", super.toString());
+        cadena = String.format("%s\nMenu a la Carta\n"
+                + "Valor del Postre: %.2f\n"
+                + "Valor Bebida: %.2f\n"
+                + "Valor Del Menu: %.2f\n",
+                cadena,
+                valorPostre,
+                valorBebida,
+                valorMenu);
 
-    
+        return cadena;
+
+    }
 }

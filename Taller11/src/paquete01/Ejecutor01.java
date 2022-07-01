@@ -5,6 +5,12 @@
  */
 package paquete01;
 
+import paquete02.Menu;
+import paquete02.MenuAlaCarta;
+import paquete02.MenuDia;
+import paquete02.MenuEconomico;
+import paquete02.MenuNinios;
+
 /**
  *
  * @author reroes
@@ -17,6 +23,12 @@ public class Ejecutor01 {
     public static void main(String[] args) {
         // TODO code application logic here
     }
+    MenuNinios me1 = new MenuNinios("Niños 01",2.00,1,5); 
+    MenuNinios me2 = new MenuNinios("Niños 02",3.00,1,5); 
+    MenuEconomico mE1 = new MenuEconomico("Econo 001",4,25);
+    MenuDia mD1 = new MenuDia("Dia 001",5,1,1);
+    MenuAlaCarta maC1 = new MenuAlaCarta("Carta 001", 6, 1.5, 2, 10);
+    
     
     
 }
@@ -64,3 +76,4 @@ IVA: 10,0%
 Total a pagar: 33,110
 
 */
+

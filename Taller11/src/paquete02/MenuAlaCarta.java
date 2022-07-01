@@ -52,4 +52,21 @@ public class MenuAlaCarta extends Menu {
         return valorPorcentajeAdicionalServicio;
     }
 
+    @Override
+    public String toString() {
+        String cadena = String.format("%s\n ", super.toString());
+        cadena = String.format("%s\nMenu a la Carta\n"
+                + "Valor Porcion Guarnizicion: %.2f\n"
+                + "Valor Bebida: %.2f\n"
+                + "Porcentaje Adicional Del Servicion: %.2f\n"
+                + "Valor Del Menu: %.2f\n",
+                cadena,
+                valorPorcionGuarnicion,
+                valorBebida,
+                valorPorcentajeAdicionalServicio,
+                valorMenu);
+
+        return cadena;
+
+    }
 }
