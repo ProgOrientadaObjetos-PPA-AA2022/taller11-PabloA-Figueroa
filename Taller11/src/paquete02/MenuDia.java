@@ -17,7 +17,6 @@ public class MenuDia extends Menu {
         super(n, vaI);
         valorPostre = vaP;
         valorBebida = vB;
-        establecerValorMenu();
     }
 
     @Override

@@ -21,8 +21,7 @@ public class Cuenta {
         nombreCl = n;
         lista = listita;
         Iva = iva; 
-        establecerSubTotal();
-        establecerValoraCancelar();
+        
     }
 
     public void establecerNombre(String n) {
@@ -41,7 +40,7 @@ public class Cuenta {
     }
 
     public void establecerValoraCancelar() {
-        valorCancelar = valorSubTotal * Iva;
+        valorCancelar = valorSubTotal + ((valorSubTotal * Iva)/100);
     }
     public String obtenerNombre() {
         return nombreCl;
@@ -71,10 +70,12 @@ public class Cuenta {
                     obtenerArriendos().get(i));
         }
 
-        cadena = String.format("\n%s Valor Subtotal: %.2f\n"
-                + "Valor Total: %.2f\n",
+        cadena = String.format("\n%sValor Subtotal: %.1f\n"
+                + "IVA: %.2f\n"
+                + "Valor Total: %.3f\n",
                 cadena,
                 obtenerValorSubTotal(),
+                Iva,
                 obtenerValorACancelar());
         return cadena;
     }

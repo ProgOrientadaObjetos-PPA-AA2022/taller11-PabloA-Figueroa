@@ -27,8 +27,8 @@ public class Ejecutor01 {
         // TODO code application logic here
         ArrayList<Menu> listaMenus = new ArrayList<>();
 
-        MenuNinios me1 = new MenuNinios("Niños 01", 2.00, 1, 5);
-        MenuNinios me2 = new MenuNinios("Niños 02", 3.00, 1, 5);
+        MenuNinios me1 = new MenuNinios("Niños 01", 2.00, 1, 1.5);
+        MenuNinios me2 = new MenuNinios("Niños 02", 3.00, 1, 1.5);
         MenuEconomico mE1 = new MenuEconomico("Econo 001", 4, 25);
         MenuDia mD1 = new MenuDia("Dia 001", 5, 1, 1);
         MenuAlaCarta maC1 = new MenuAlaCarta("Carta 001", 6, 1.5, 2, 10);
@@ -39,7 +39,13 @@ public class Ejecutor01 {
         listaMenus.add(mD1);
         listaMenus.add(maC1);
 
+        for (int i = 0; i < listaMenus.size(); i++) {
+            listaMenus.get(i).establecerValorMenu();
+        }
+
         Cuenta cue1 = new Cuenta("Rene Elizalde", 10, listaMenus);
+        cue1.establecerSubTotal();
+        cue1.establecerValoraCancelar();
         System.out.println(cue1);
 
     }

@@ -16,7 +16,6 @@ public class MenuEconomico extends Menu{
         super(n, vaI);
         porcentaje = vDes;
         establecerValorDescuento();
-        establecerValorMenu();
        
     }
 
@@ -35,7 +34,7 @@ public class MenuEconomico extends Menu{
     }
     @Override
     public String toString() {
-        String cadena = String.format("%s\n ", super.toString());
+        String cadena = String.format("%s\n", super.toString());
         cadena = String.format("%s"
                 + "Valor del Descuento: %.2f\n"
                 + "Valor Final Del Menu: %.2f\n",

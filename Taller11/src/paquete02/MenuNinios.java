@@ -16,7 +16,6 @@ public class MenuNinios extends Menu{
         super(n, vaI);
         valorHelado = vaHela;
         valorPastel = vaPas;
-         establecerValorMenu();
     }
 
     @Override
@@ -42,7 +41,7 @@ public class MenuNinios extends Menu{
     }
     @Override
     public String toString() {
-        String cadena = String.format("%s\n ", super.toString());
+        String cadena = String.format("%s\n", super.toString());
         cadena = String.format("%s"
                 + "Valor del Helado: %.2f\n"
                 + "Valor del Pastel: %.2f\n"
